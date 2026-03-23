@@ -1,0 +1,2 @@
+git config user.name "26605-dot"
+git config user.email "26605@burnside.school.nz"
