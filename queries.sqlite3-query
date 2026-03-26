@@ -1,0 +1,27 @@
+-- database: ./database.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM Bikes;
+
+
+INSERT INTO Bikes(Model,TopSpeed,Cost,Desctiption) VALUES("MT-03",108,5300,"The Yamaha MT-03");
+
+INSERT INTO Bikes(Model,TopSpeed,Cost,Desctiption) VALUES("MT-03",108,5300,"The Yamaha MT-03");
+INSERT INTO Bikes(Model,TopSpeed,Cost,Desctiption) VALUES("Hayabusa",186,19099,"The Suzuki Hayabusa");
+INSERT INTO Bikes(Model,TopSpeed,Cost,Desctiption) VALUES("CBR500R",116,7299,"The Honda CBR500R");
+INSERT INTO Bikes(Model,TopSpeed,Cost,Desctiption) VALUES("Ninja 400",116,5299,"The Kawasaki Ninja 400");
+
+
+-- All bikes
+
+SELECT * FROM Bikes;
+-- all bikes and the maker
+SELECT Makers.Name,Bikes.Model FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID;
+
+--bikes of one make
+
+SELECT Bikes.Model FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID
+WHERE Makers.Name="Yamaha";
